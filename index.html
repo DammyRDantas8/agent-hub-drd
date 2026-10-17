@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub de Agentes - DRD</title>
+    <title>Hub de Agentes | Damiana R Dantas</title>
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #121826;
+            --bg-color: #07090e;
+            --card-bg: #0f1523;
+            --card-hover: #161f33;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
             --accent-blue: #3b82f6;
@@ -29,53 +30,83 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
 
-        .container {
-            max-width: 800px;
+        .header-container {
+            max-width: 1000px;
             width: 100%;
-            background-color: var(--card-bg);
-            border: 1.3px solid var(--border-color);
-            border-radius: 14px;
-            padding: 3rem 2rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p {
+        .subtitle {
             color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .btn-group {
+        .grid-container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1.3px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s ease, background-color 0.2s ease;
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background-color: var(--card-hover);
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
         }
 
         .btn {
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
             font-weight: 600;
             border-radius: 8px;
             cursor: pointer;
             text-decoration: none;
+            text-align: center;
             transition: opacity 0.2s ease;
         }
 
@@ -84,24 +115,52 @@
         }
 
         .footer {
-            margin-top: 2rem;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
             font-size: 0.85rem;
             color: var(--text-muted);
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="header-container">
         <h1>Hub de Agentes DRD</h1>
-        <p>Plataforma autônoma e centralizada para orquestração de inteligência artificial, engenharia de sistemas e soluções avançadas.</p>
-        
-        <div class="btn-group">
-            <a href="https://github.com/dammyrdantas8" target="_blank" class="btn">Acessar GitHub</a>
+        <p class="subtitle">Plataforma autônoma e centralizada para orquestração de inteligência artificial, engenharia de sistemas e soluções avançadas desenvolvidas por Damiana R Dantas.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <div>
+                <h3>Ágna & Agentes IA</h3>
+                <p>Orquestradores autônomos avançados, multi-agentes especializados integrados com fluxos locais e arquiteturas inteligentes.</p>
+            </div>
+            <a href="https://github.com/dammyrdantas8" target="_blank" class="btn">Explorar Agentes</a>
         </div>
 
-        <div class="footer">
-            &copy; 2026 Damiana Rodrigues Dantas. Todos os direitos reservados.
+        <div class="card">
+            <div>
+                <h3>Engenharia & Sistemas</h3>
+                <p>Desenvolvimento Full Stack, cibersegurança, estruturas modulares e padrões técnicos rigorosos baseados em documentação avançada.</p>
+            </div>
+            <a href="https://github.com/dammyrdantas8" target="_blank" class="btn">Ver Repositórios</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Law Dantas & HubLab</h3>
+                <p>Pesquisas jurídicas, manuscritos históricos, plataformas educacionais e automações estratégicas em ecossistemas digitais.</p>
+            </div>
+            <a href="https://github.com/dammyrdantas8" target="_blank" class="btn">Saiba Mais</a>
         </div>
     </div>
+
+    <div class="footer">
+        &copy; 2026 Damiana Rodrigues Dantas (DammyRDantas8). Todos os direitos reservados.
+    </div>
+
 </body>
 </html>
